@@ -1,0 +1,6 @@
+version: '3'
+services:
+  my-back-service:
+    image: atinyshrimp/mlops-td4-flask-app
+    ports:
+      - "5000:5000"
