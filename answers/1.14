@@ -1,1 +1,2 @@
-docker stop
+docker stop TD4_Flask_App
+docker stop TD4_Flask_Frontend
