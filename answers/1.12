@@ -1,0 +1,1 @@
+docker run -d -p 8080:80 -e WS_BACK_URL=http://127.0.0.1:5000 --name=TD4_Flask_Frontend flask-front-end
