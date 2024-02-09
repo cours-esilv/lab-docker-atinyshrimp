@@ -1,6 +1,20 @@
 version: '3'
+
+# volumes:
+  # data-volume: {}
+
 services:
-  my-back-service:
+  back-service:
+    # volumes:
+    #  - data-volume:/data
     image: atinyshrimp/mlops-td4-flask-app
     ports:
       - "5000:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=development
+  front-service:
+    image: atinyshrimp/mlops-td4-flask-frontend
+    ports:
+      - "8080:80"
+    environment:
+      - WS_BACK_URL=http://localhost:5000
